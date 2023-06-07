@@ -7,30 +7,29 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">TITOLO</th>
+                    <th scope="col">TITOLO ORIGINALE</th>
+                    <th scope="col">NAZIONALITA'</th>
+                    <th scope="col">DATA</th>
+                    <th scope="col">VOTO</th>
+                    <th scope="col">AZIONI</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                @foreach ($movies as $movie)
+                    <tr>
+                        <th scope="row">{{ $movie->id }}</th>
+                        <td>{{ $movie->title }}</td>
+                        <td>{{ $movie->original_title }}</td>
+                        <td>{{ $movie->nationality }}</td>
+                        <td>{{ $movie->date }}</td>
+                        <td>{{ $movie->vote }}</td>
+                        <td><a href="{{ route('details', ['id' => $movie->id]) }}" class="btn btn-primary">DETTAGLI</a></td>
+                    </tr>
+                @endforeach
+
+
             </tbody>
         </table>
 

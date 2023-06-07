@@ -19,3 +19,5 @@ Route::get('/', [PageController::class, 'index'])->name('home');
 Route::get('/elenco-film', [PageController::class, 'movies'])->name('movies');
 
 Route::get('/contatti', [PageController::class, 'contacts'])->name('contacts');
+
+Route::get('/dettagli/{id}', [PageController::class, 'details'])->name('details');
