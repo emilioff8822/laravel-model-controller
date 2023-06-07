@@ -17,9 +17,10 @@ public function index () {
 
 public function movies () {
 
-    $movie = movies::all();
+ $movies = movies::all(); // SELECT * ALL  from movies
 
- return view('movies');
+
+ return view('movies', compact('movies'));
 
 }
 
