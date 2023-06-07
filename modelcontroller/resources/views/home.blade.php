@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Home</h1>
+        <h1>{{ $title }}</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nulla alias assumenda! Architecto beatae illum
             odio? Impedit culpa natus nemo libero laboriosam deserunt, tempore pariatur, dolor provident commodi, rem
             officiis quasi quas ea id sint totam quo repudiandae dignissimos aspernatur. Ab hic fugiat voluptatem? Alias
