@@ -42,7 +42,12 @@ public function details ($id) {
         $movie = movies::find($id);
 
         if($movie){
-            return view('details', ['movie' => $movie]);
+            return view('details', ['movie' => $movie]); //uso un array associativo per passare un array alla vista detail e poi stamparlo 'movie' e' la chiave , $movie e' il valore. 'movie' lo riutilizzo in details.se cambiassi 'movie' a 'film' nel controller, allora dovrei anche cambiare tutte le istanze di $movie nella tua vista a $film.
+
+
+
+
+
 
         }else {
             return redirect()->route ('movies');
